@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="box">
+        <h1>Formulario de Nombres</h1>
+        <form method="POST">
+            <label>Nombre 1:</label>
+            <input type="text" name="nombre1" required>
+
+            <label>Nombre 2:</label>
+            <input type="text" name="nombre2" required>
+
+            <label>Nombre 3:</label>
+            <input type="text" name="nombre3" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        {% if mayor %}
+            <p>El nombre con mayor cantidad de caracteres es: {{ mayor }}</p>
+            <p>El nombre contiene: {{ largo }} caracteres...</p>
+        {% endif %}
+    </div>
+</body>
+</html>
